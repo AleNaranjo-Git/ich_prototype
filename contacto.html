@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de contacto para trámites fiscales.">
+    <title>Contacto - Trámites Fiscales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .high-contrast {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .high-contrast a {
+            color: #0ff;
+        }
+
+        .high-contrast button {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .high-contrast button:hover {
+            background-color: #555;
+        }
+
+        .high-contrast input, .high-contrast textarea {
+            background-color: #000;
+            color: #fff;
+            border: 1px solid #555;
+        }
+    </style>
+</head>
+<body class="bg-gray-800 text-white">
+    <!-- Header -->
+    <header class="bg-gray-800 text-white py-4 shadow-md w-full">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-2xl font-bold">Trámites Fiscales</h1>
+            <nav class="flex items-center space-x-4">
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white">Inicio</a></li>
+                    <li><a href="consulta.html" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white">Consulta</a></li>
+                    <li><a href="formulario.html" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white">Formulario</a></li>
+                    <li><a href="contacto.html" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white">Contacto</a></li>
+                </ul>
+                <button id="toggle-contrast" class="bg-gray-700 text-white py-2 px-4 rounded shadow hover:bg-gray-600">Modo Alto Contraste</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-16 bg-gray-800 text-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-6">Contáctanos</h2>
+            <p class="text-lg mb-8">Si tienes alguna duda o necesitas ayuda, no dudes en contactarnos.</p>
+            <form id="contacto-form" class="space-y-4">
+                <div>
+                    <label for="nombre" class="block text-sm font-medium">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" class="mt-1 block w-full bg-gray-800 text-white border border-gray-500 rounded-md shadow-sm focus:ring-blue-400 focus:border-blue-400" placeholder="Ingresa tu nombre completo" required>
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" class="mt-1 block w-full bg-gray-800 text-white border border-gray-500 rounded-md shadow-sm focus:ring-blue-400 focus:border-blue-400" placeholder="Ingresa tu correo electrónico" required>
+                </div>
+                <div>
+                    <label for="mensaje" class="block text-sm font-medium">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" class="mt-1 block w-full bg-gray-800 text-white border border-gray-500 rounded-md shadow-sm focus:ring-blue-400 focus:border-blue-400" placeholder="Escribe tu mensaje" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-400 text-white py-2 px-4 rounded hover:bg-blue-500">Enviar</button>
+            </form>
+            <div class="mt-8">
+                <h3 class="text-xl font-bold">Información de Contacto</h3>
+                <p>Correo: ihc@proyecto.com</p>
+                <p>Teléfono: +506 88888888</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4 fixed bottom-0 w-full">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Plataforma de Trámites Fiscales. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const toggleContrast = document.getElementById('toggle-contrast');
+        toggleContrast.addEventListener('click', () => {
+            document.body.classList.toggle('high-contrast');
+        });
+    </script>
+</body>
+</html>
