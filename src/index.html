@@ -1,24 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IHC Prototype</title>
-    <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
-    <link href="./output.css" rel="stylesheet" />
-  </head>
-  <body>
-    <header>
-      <h1 class="text-3xl font-bold underline">Hello world!</h1>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plataforma para trámites fiscales en línea.">
+    <title>Inicio - Trámites Fiscales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .high-contrast {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .high-contrast a {
+            color: #0ff;
+        }
+
+        .high-contrast button {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .high-contrast button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body class="bg-gray-800 text-white">
+    <!-- Header -->
+    <header class="bg-gray-800 text-white py-4 shadow-md w-full">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-2xl font-bold">Trámites Fiscales</h1>
+            <nav class="flex items-center space-x-4">
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white">Inicio</a></li>
+                    <li><a href="consulta.html" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white">Consulta</a></li>
+                    <li><a href="formulario.html" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white">Formulario</a></li>
+                    <li><a href="contacto.html" class="hover:underline focus:outline-none focus:ring-2 focus:ring-white">Contacto</a></li>
+                </ul>
+                <button id="toggle-contrast" class="bg-gray-700 text-white py-2 px-4 rounded shadow hover:bg-gray-600">Modo Alto Contraste</button>
+            </nav>
+        </div>
     </header>
-    <main>
-      <section>
-        <h2>About</h2>
-        <p>This is a prototype for an IHC application.</p>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2025 IHC Prototype</p>
+
+    <!-- Información General -->
+    <section id="info-general" class="py-16 text-center">
+        <h2 class="text-4xl font-bold mb-6">Bienvenido a la Plataforma de Trámites Fiscales</h2>
+        <p class="text-lg mb-8">Aquí podrás realizar tus trámites fiscales de manera rápida, segura y eficiente. Explora las diferentes secciones para más información.</p>
+        <div class="flex justify-center space-x-4">
+            <a href="consulta.html" class="bg-blue-400 text-white py-2 px-6 rounded hover:bg-blue-500">Ir a Consulta</a>
+            <a href="formulario.html" class="bg-blue-400 text-white py-2 px-6 rounded hover:bg-blue-500">Ir a Formulario</a>
+            <a href="contacto.html" class="bg-blue-400 text-white py-2 px-6 rounded hover:bg-blue-500">Ir a Contacto</a>
+        </div>
+    </section>
+
+    <!-- Tipos de Trámites -->
+    <section id="tipos-tramites" class="py-16 bg-gray-700 text-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-6">Tipos de Trámites Disponibles</h2>
+            <ul class="list-disc list-inside text-lg space-y-4">
+                <li>
+                    <strong>Declaraciones fiscales:</strong> Presenta tus declaraciones de impuestos de manera rápida y segura.
+                </li>
+                <li>
+                    <strong>Pagos de impuestos:</strong> Realiza el pago de tus obligaciones fiscales directamente desde nuestra plataforma.
+                </li>
+                <li>
+                    <strong>Consultas de trámites previos:</strong> Accede al historial de tus trámites fiscales realizados anteriormente.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Funcionalidades -->
+    <section id="funcionalidades" class="py-16 bg-gray-800 text-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-6">¿Qué puedes hacer aquí?</h2>
+            <p class="text-lg mb-4">Consulta tus trámites previos ingresando tu número de cédula en la sección de Consulta.</p>
+            <p class="text-lg mb-4">Llena el formulario para realizar nuevos trámites fiscales de manera sencilla.</p>
+            <p class="text-lg">Contáctanos si tienes dudas o necesitas ayuda con tus trámites.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4 fixed bottom-0 w-full">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Plataforma de Trámites Fiscales. Todos los derechos reservados.</p>
+        </div>
     </footer>
-  </body>
+
+    <script>
+        const toggleContrast = document.getElementById('toggle-contrast');
+        toggleContrast.addEventListener('click', () => {
+            document.body.classList.toggle('high-contrast');
+        });
+    </script>
+</body>
 </html>
