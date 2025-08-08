@@ -2,5 +2,24 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.1.11",
     "tailwindcss": "^4.1.11"
-  }
+  },
+  "name": "ihc_prototype",
+  "version": "1.0.0",
+  "description": "Este repositorio contiene el prototipo de una interfaz para trámites tributarios en línea, usando Tailwind CSS con el CLI.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AleNaranjo-Git/ich_prototype.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AleNaranjo-Git/ich_prototype/issues"
+  },
+  "homepage": "https://github.com/AleNaranjo-Git/ich_prototype#readme"
 }
